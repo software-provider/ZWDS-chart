@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:orientation="vertical">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="44sp" android:id="@+id/title_textView" android:layout_weight="1"
+            tools:text="Concubine" android:fontFamily="sans-serif" android:typeface="normal" android:textSize="30sp"
+            android:textStyle="bold" android:textAlignment="viewStart" android:visibility="visible"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/additionalStars_textView" android:layout_weight="1"
+            android:textSize="18sp" tools:text="with Emperor, Empress, PoJun, with Emperor, Empress, PoJun, etc."
+            android:textStyle="bold"/>
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/commentary_textView" android:layout_weight="1"
+            android:textSize="14sp"/>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+import com.meowbox.progressions.db.LunarDate;
+import com.meowbox.progressions.db.SolarDate;
+
+
+CREATE TABLE ephemerisPoint(
+    solarDate INTEGER AS SolarDate NOT NULL PRIMARY KEY,
+    lunarDate INTEGER AS LunarDate NOT NULL
+);
+
+insertItem:
+INSERT OR FAIL INTO ephemerisPoint(solarDate, lunarDate) VALUES (?, ?);
+
+getBySolarDate:
+SELECT solarDate, lunarDate
+FROM ephemerisPoint
+WHERE solarDate = ?;
+
+count:
+SELECT COUNT(1) AS Int
+FROM ephemerisPoint;
+
+insertMany:
+INSERT OR FAIL INTO ephemerisPoint(solarDate, lunarDate) VALUES
+(?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?);

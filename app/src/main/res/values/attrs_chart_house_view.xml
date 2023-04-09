@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="ChartHouseView">
+        <attr name="branch" format="string"/>
+    </declare-styleable>
+</resources>

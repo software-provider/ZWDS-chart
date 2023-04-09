@@ -1,0 +1,61 @@
+import com.meowbox.fourpillars.Branch;
+import com.meowbox.fourpillars.Palace;
+import com.meowbox.fourpillars.Stem;
+import com.meowbox.progressions.RoddenRating;
+import com.meowbox.progressions.db.ChartRecordId;
+import com.meowbox.DateTime;
+import com.meowbox.progressions.db.LunarDate;
+import com.meowbox.progressions.db.SolarDate;
+import java.lang.Boolean;
+
+CREATE TABLE chartRecord(
+    id INTEGER as ChartRecordId PRIMARY KEY ASC,
+    ephemerisPointId INTEGER as SolarDate NOT NULL,
+    name TEXT NOT NULL,
+    dob INTEGER as DateTime NOT NULL,
+    isMine INTEGER as Boolean NOT NULL DEFAULT 0,
+    yearBranch TEXT as Branch NOT NULL,
+    yearStem TEXT as Stem NOT NULL,
+    hourBranch TEXT as Branch NOT NULL,
+    hourStem TEXT as Stem NOT NULL,
+    ming TEXT as Branch NOT NULL,
+    ziWei TEXT as Palace NOT NULL,
+    tianFu TEXT as Palace NOT NULL,
+    url TEXT as String,
+    roddenRating TEXT as RoddenRating
+);
+
+insertTheirs:
+INSERT OR FAIL INTO chartRecord(
+    ephemerisPointId, name, dob, yearBranch, yearStem,
+    hourBranch, hourStem, ming, ziWei, tianFu, url, roddenRating, isMine
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1);
+
+insertOne:
+INSERT OR FAIL INTO chartRecord(
+    ephemerisPointId, name, dob, yearBranch, yearStem,
+    hourBranch, hourStem, ming, ziWei, tianFu, url, roddenRating, isMine
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, NULL, 1);
+
+getById:
+SELECT * FROM chartRecord
+WHERE chartRecord.id = ?;
+
+getLast:
+SELECT * FROM chartRecord
+WHERE id = (SELECT max(id) FROM chartRecord);
+
+search:
+SELECT * FROM chartRecord
+WHERE name LIKE ? AND isMine = 1
+ORDER BY name ASC;
+
+mine:
+SELECT * FROM chartRecord
+WHERE isMine = 1
+ORDER BY name ASC LIMIT 100;
+
+countMine:
+SELECT count(1)
+FROM chartRecord
+WHERE isMine = 1;

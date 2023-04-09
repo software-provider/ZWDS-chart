@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content" android:id="@+id/view_chart_center">
+
+    <!--<android.support.constraint.ConstraintLayout android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_constraintWidth_percent="0.5"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+
+    <!--&gt;-->
+    <TextView
+            android:text="Tyler Gannon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/personName_textView" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:textSize="24sp" android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="bold"/>
+    <TextView
+            android:text="1978 September 27, 12:55 pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dob_textView" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/personName_textView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:fontFamily="sans-serif-smallcaps" android:textSize="13sp"/>
+
+    <TextView
+            android:text="3rd Month, 1st Day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lunarDate_textView" android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/dob_textView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:fontFamily="sans-serif-smallcaps" android:textSize="11sp"/>
+
+    <TextView
+            android:text="Inner Element: Wood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/innerElement_textView" android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/lunarDate_textView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:fontFamily="sans-serif-smallcaps" android:textSize="13sp"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/innerElement_textView"
+    >
+
+        <TextView
+                android:text="Year:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/yearPillarTitle_textView" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="11sp" android:textAlignment="center"
+                android:fontFamily="sans-serif-smallcaps" android:textAllCaps="false" android:textStyle="bold"/>
+        <TextView
+                android:text="Month:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/monthPillarTitle_textView"
+                app:layout_constraintStart_toEndOf="@id/yearPillarTitle_textView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="11sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"/>
+        <TextView
+                android:text="Day:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/dayPillarTitle_textView"
+                app:layout_constraintStart_toEndOf="@id/monthPillarTitle_textView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="11sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"/>
+        <TextView
+                android:text="Hour:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/hourPillarTitle_textView"
+                app:layout_constraintStart_toEndOf="@id/dayPillarTitle_textView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="11sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"/>
+
+        <TextView
+                android:text="Wood"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/yearStem_textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yearPillarTitle_textView"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="10sp" android:textAlignment="center"
+                android:fontFamily="sans-serif-smallcaps" android:layout_marginTop="4dp"/>
+        <TextView
+                android:text="Metal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/monthStem_textView"
+                app:layout_constraintStart_toEndOf="@id/yearStem_textView"
+                app:layout_constraintTop_toBottomOf="@id/monthPillarTitle_textView"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="10sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"
+                android:layout_marginTop="4dp"/>
+        <TextView
+                android:text="Fire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/dayStem_textView"
+                app:layout_constraintStart_toEndOf="@id/monthStem_textView"
+                app:layout_constraintTop_toBottomOf="@id/dayPillarTitle_textView"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="10sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"
+                android:layout_marginTop="4dp"/>
+        <TextView
+                android:text="Water"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/hourStem_textView"
+                app:layout_constraintStart_toEndOf="@id/dayStem_textView"
+                app:layout_constraintTop_toBottomOf="@id/hourPillarTitle_textView"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="10sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"
+                android:layout_marginTop="4dp"/>
+
+        <TextView
+                android:text="Horse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/yearBranch_textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yearStem_textView"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="10sp" android:textAlignment="center"
+                android:fontFamily="sans-serif-smallcaps"/>
+        <TextView
+                android:text="Rooster"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/monthBranch_textView"
+                app:layout_constraintStart_toEndOf="@id/yearBranch_textView"
+                app:layout_constraintTop_toBottomOf="@id/monthStem_textView"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="10sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"/>
+        <TextView
+                android:text="Pig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/dayBranch_textView"
+                app:layout_constraintStart_toEndOf="@id/monthBranch_textView"
+                app:layout_constraintTop_toBottomOf="@id/dayStem_textView"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="10sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"/>
+        <TextView
+                android:text="Monkey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/hourBranch_textView"
+                app:layout_constraintStart_toEndOf="@id/dayBranch_textView"
+                app:layout_constraintTop_toBottomOf="@id/hourStem_textView"
+                app:layout_constraintWidth_percent="0.25"
+                android:textSize="10sp" android:textAlignment="center" android:fontFamily="sans-serif-smallcaps"/>
+    </android.support.constraint.ConstraintLayout>
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+
+</android.support.constraint.ConstraintLayout>

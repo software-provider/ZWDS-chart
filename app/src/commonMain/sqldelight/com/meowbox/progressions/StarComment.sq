@@ -1,0 +1,36 @@
+import kotlin.collections.List;
+import kotlin.collections.Set;
+import com.meowbox.fourpillars.Star;
+import com.meowbox.progressions.StarComment;
+import com.meowbox.progressions.Auspices;
+import com.meowbox.fourpillars.Palace;
+import com.meowbox.fourpillars.Branch;
+
+CREATE TABLE starComment(
+    star TEXT as Star NOT NULL,
+    palace TEXT as Palace,
+    comments TEXT as String NOT NULL,
+    auspices TEXT as Auspices NOT NULL,
+    branch TEXT as List<Branch> NOT NULL,
+    inHouseWith TEXT as List<Set<Star>> NOT NULL
+);
+
+insertItem:
+INSERT OR FAIL INTO starComment(star, comments, auspices, branch, inHouseWith) VALUES (?, ?, ?, ?, ?);
+
+getByPalace:
+SELECT star, palace, comments, auspices, branch, inHouseWith FROM starComment
+WHERE star = ? AND palace = ?;
+
+count:
+SELECT COUNT(1) FROM starComment;
+
+
+
+-- \@Serializable
+--  data class StarComment(val star: Star,
+--                         val comments: String,
+--                         @Optional val palace: Palace? = null,
+--                         @Optional val auspices: Auspices = Auspices.Neutral,
+--                         @Optional val branch: List<Branch> = listOf(),
+--                         @Optional val inHouseWith: List<Set<Star>> = listOf())

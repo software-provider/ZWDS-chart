@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Progressions</string>
+    <string name="title_activity_chart_list">My Charts</string>
+    <string name="title_activity_new_chart_dob">NewChartDobActivity</string>
+</resources>
