@@ -2,8 +2,6 @@
 .gradle/
 build/
 .idea/
-.DS_STORE
-local.properties
- 
+.DS_STORE 
 node_modules
  
