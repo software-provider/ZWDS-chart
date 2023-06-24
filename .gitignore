@@ -1,7 +1,8 @@
-*.iml
+ *.iml
 .gradle/
-build/
+build/ 
 .idea/
 .DS_STORE 
 node_modules
+ 
  
