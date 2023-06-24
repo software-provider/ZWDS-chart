@@ -5,7 +5,7 @@
     }
  
 }
-repositories {
+repositories { 
     google()
     jcenter()
 }
